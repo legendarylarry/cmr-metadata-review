@@ -1,0 +1,71 @@
+➜ ix:~/repo/cmr-metadata-review git:(master) ✗ λ bin/rails app:update
+Warning: the running version of Bundler (2.1.4) is older than the version that created the lockfile (2.2.16). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.2.16`.
+   identical  config/boot.rb
+       exist  config
+    conflict  config/routes.rb
+Overwrite /Users/lrrrgg/repo/cmr-metadata-review/config/routes.rb? (enter "h" for help) [Ynaqdhm] a
+       force  config/routes.rb
+    conflict  config/application.rb
+       force  config/application.rb
+   identical  config/environment.rb
+    conflict  config/cable.yml
+       force  config/cable.yml
+    conflict  config/puma.rb
+       force  config/puma.rb
+    conflict  config/spring.rb
+       force  config/spring.rb
+   identical  config/storage.yml
+       exist  config/environments
+    conflict  config/environments/development.rb
+       force  config/environments/development.rb
+    conflict  config/environments/production.rb
+       force  config/environments/production.rb
+    conflict  config/environments/test.rb
+       force  config/environments/test.rb
+       exist  config/initializers
+   identical  config/initializers/application_controller_renderer.rb
+    conflict  config/initializers/assets.rb
+       force  config/initializers/assets.rb
+   identical  config/initializers/backtrace_silencers.rb
+    conflict  config/initializers/content_security_policy.rb
+       force  config/initializers/content_security_policy.rb
+   identical  config/initializers/cookies_serializer.rb
+      create  config/initializers/cors.rb
+   identical  config/initializers/filter_parameter_logging.rb
+   identical  config/initializers/inflections.rb
+   identical  config/initializers/mime_types.rb
+      create  config/initializers/new_framework_defaults_6_0.rb
+    conflict  config/initializers/wrap_parameters.rb
+       force  config/initializers/wrap_parameters.rb
+       exist  config/locales
+    conflict  config/locales/en.yml
+       force  config/locales/en.yml
+      remove  config/initializers/cors.rb
+       exist  bin
+    conflict  bin/rails
+       force  bin/rails
+    conflict  bin/rake
+       force  bin/rake
+    conflict  bin/setup
+       force  bin/setup
+   identical  bin/yarn
+       rails  active_storage:update
+rails aborted!
+Sprockets::Railtie::ManifestNeededError: Expected to find a manifest file in `app/assets/config/manifest.js`
+But did not, please create this file and use it to link any assets that need
+to be rendered by your app:
+
+Example:
+  //= link_tree ../images
+  //= link_directory ../javascripts .js
+  //= link_directory ../stylesheets .css
+and restart your server
+
+For more information see: https://github.com/rails/sprockets/blob/070fc01947c111d35bb4c836e9bb71962a8e0595/UPGRADING.md#manifestjs
+/Users/lrrrgg/repo/cmr-metadata-review/config/environment.rb:5:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+Tasks: TOP => active_storage:update => environment
+(See full trace by running task with --trace)
+
+After this, check Rails upgrade guide at https://guides.rubyonrails.org/upgrading_ruby_on_rails.html for more details about upgrading your app.
